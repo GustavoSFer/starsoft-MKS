@@ -4,8 +4,8 @@ import { Cabecalho } from '../styles';
 function Header() {
     return (
         <Cabecalho>
-            <h3>MKS <span>Loja</span></h3>
-            <p>carrinho</p>
+            <h3>MKS <span>Sistemas</span></h3>
+            <button>carrinho</button>
         </Cabecalho>
     );
 }
