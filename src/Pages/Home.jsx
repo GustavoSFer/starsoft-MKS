@@ -1,10 +1,15 @@
 import React from "react";
+import CardProduto from "../Components/CardProduto";
+import { Container } from '../styles';
 
 function Home() {
     return (
-        <div>
-            Homeeee
-        </div>
+        <Container>
+            <CardProduto />
+            <CardProduto />
+            <CardProduto />
+            <CardProduto />
+        </Container>
     );
 }
 
