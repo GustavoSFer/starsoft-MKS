@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, SessaoCard, TitlePrice } from '../styles';
 
-function CardProduto({ item }) {
+function CardProduto({ item, handleClick }) {
 
   return (
     <Card>
@@ -14,7 +14,7 @@ function CardProduto({ item }) {
                         <p>R${item.price}</p>
                     </TitlePrice>
                     <p>{item.description}</p>
-                    <button type='button'>Comprar</button>
+                    <button type='button' onClick={handleClick}>Comprar</button>
                 </SessaoCard>
             </div>
         </section>

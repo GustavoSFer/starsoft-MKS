@@ -1,11 +1,12 @@
 import React from "react";
 import { Cabecalho } from '../styles';
 
-function Header() {
+function Header({ carrinho }) {
+
     return (
         <Cabecalho>
             <h3>MKS <span>Sistemas</span></h3>
-            <button>carrinho</button>
+            <button>carrinho {carrinho.length}</button>
         </Cabecalho>
     );
 }
