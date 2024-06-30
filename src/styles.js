@@ -47,19 +47,28 @@ export const Cabecalho = styled.div`
 `
 
 export const Card = styled.div`
-    text-align: center;
-    border: 1px solid red;
-    border-radius: 8px;
-    margin: 10px;
+
+    border: 1px solid #FFFAF0;
+    border-radius: 5px;
+    margin: 15px;
     width: 220px;
-    box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 0.3);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 
     button {
-        border-radius: 0 0 8px 8px;
         background-color: blue;
         color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 0 0 5px 5px;
+        cursor: pointer;
         width: 100%;
-        padding: 5px;
+        align-self: center;
     }
     
 `
@@ -70,6 +79,10 @@ export const SessaoCard = styled.div`
     img {
         width: 60%;
         height: auto;
+    }
+
+    p {
+        font-size: 12px;
     }
 `
 
@@ -89,9 +102,9 @@ export const TitlePrice = styled.div`
         background-color: black;
         color: white;
         font-weight: 700;
-        font-size: 14px;
+        font-size: 12px;
         padding: 5px;
-        width: 30%;
+        width: 36%;
         height: 10%;
      }
 `

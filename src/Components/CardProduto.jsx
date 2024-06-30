@@ -1,18 +1,19 @@
 import React from 'react';
 import { Card, SessaoCard, TitlePrice } from '../styles';
 
-function CardProduto() {
+function CardProduto({ item }) {
+
   return (
     <Card>
        <section>
             <div>
                 <SessaoCard>
-                    <img src="https://www.imagensempng.com.br/wp-content/uploads/2021/10/Notebook-Png.png" alt="" />
+                    <img src={item.photo} alt={item.description} />
                     <TitlePrice>
-                        <h1>Card 3 hdushdushu dshudhs</h1>
-                        <p>R$: 300</p>
+                        <h1>{item.name}</h1>
+                        <p>R${item.price}</p>
                     </TitlePrice>
-                    <p>Descrição do card 3. teste jdhsuhusd  djsuidis</p>
+                    <p>{item.description}</p>
                     <button type='button'>Comprar</button>
                 </SessaoCard>
             </div>

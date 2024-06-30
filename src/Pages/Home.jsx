@@ -1,14 +1,25 @@
 import React from "react";
 import CardProduto from "../Components/CardProduto";
 import { Container } from '../styles';
+import { useProductsData } from "../Hooks/useProductsSate";
+
 
 function Home() {
-    return (
+    const { data, isLoading } = useProductsData();
+
+    if (isLoading) {
+        return <p>Carregando ...</p>
+        
+    }
+   
+   return (
         <Container>
-            <CardProduto />
-            <CardProduto />
-            <CardProduto />
-            <CardProduto />
+            {
+                data.products.map((item) => (
+                    <CardProduto key={item.id} item={item}/>
+                ))
+            }
+            
         </Container>
     );
 }
