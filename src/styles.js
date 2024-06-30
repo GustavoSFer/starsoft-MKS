@@ -43,6 +43,7 @@ export const Cabecalho = styled.div`
         top: 3%;
         right: 5%;
         text-align: center;
+        cursor: pointer;
     }
 `
 
@@ -107,4 +108,14 @@ export const TitlePrice = styled.div`
         width: 36%;
         height: 10%;
      }
+`
+export const Sacola = styled.div`
+    border: 2px solid read;
+    background-color: black;
+    border-radius: 10px;
+    width: 350px;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 90px;
 `
