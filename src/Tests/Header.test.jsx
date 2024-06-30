@@ -4,7 +4,6 @@ import '@testing-library/jest-dom/extend-expect';
 import Header from '../Components/Header';
 import { ProductsData } from './Mock/ProductsData';
 
-
 describe('Header Component', () => {
     it('Verifica se existe o texto "MKS" em tela', () => {
         render(<Header carrinho={ProductsData} />);
