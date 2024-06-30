@@ -2,14 +2,14 @@ import { BrowserRouter } from 'react-router-dom';
 import Routers from './Routes';
 import './App.css';
 import Header from './Components/Header';
-import Footer from './Components/Footer';
+import Rodape from './Components/Rodape';
 
 function App() {
   return (
     <BrowserRouter>
     <Header />
       <Routers />
-      <Footer />
+      <Rodape />
   </BrowserRouter>
   );
 }

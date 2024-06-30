@@ -1,11 +1,12 @@
-import react from 'react';
+import React from "react";
+import { Cabecalho } from '../styles';
 
 function Header() {
     return (
-        <header>
-            <h1>MKS <span>Loja</span></h1>
+        <Cabecalho>
+            <h3>MKS <span>Loja</span></h3>
             <p>carrinho</p>
-        </header>
+        </Cabecalho>
     );
 }
 
