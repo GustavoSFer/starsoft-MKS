@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Cabecalho } from '../styles';
 import Carrinho from "./Carrinho";
+import { FaShoppingCart } from "react-icons/fa";
 
 function Header({ carrinho }) {
 
@@ -13,11 +14,11 @@ function Header({ carrinho }) {
     return (
         <Cabecalho>
             <h3>MKS <span>Sistemas</span></h3>
-            <button type="button" onClick={carClick}>
-                carrinho {carrinho.length}
+            <button type="button" onClick={carClick}>             
+                <FaShoppingCart /><span> </span>{carrinho.length}
             </button>
             {
-                verCarrinho && <Carrinho />
+                verCarrinho && <Carrinho handleClick={carClick} />
             }
         </Cabecalho>
     );

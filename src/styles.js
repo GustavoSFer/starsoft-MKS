@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    border: 1px solid red;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -109,13 +108,85 @@ export const TitlePrice = styled.div`
         height: 10%;
      }
 `
-export const Sacola = styled.div`
-    border: 2px solid read;
-    background-color: black;
-    border-radius: 10px;
-    width: 350px;
-    height: 100%;
-    position: fixed;
+export const Total = styled.div`
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    margin-top: 1px;
+`
+
+export const Cart = styled.div`
+    width: 300px;
+    background-color: #0078d7;
+    padding: 20px;
+    color: white;
+    position: absolute;
     right: 0;
-    top: 90px;
+    top: 0;
+    height: 100%;
+
+    button {
+        text-align: end;
+        font-weight: 700;
+        font-size: 10px;
+        border: none;
+        background: none;
+        color: white;        
+        background-color: black;
+        padding: 13px;
+        border-radius: 50%;
+    }
+    h2 {
+        font-size: 20px;
+        text-align: start;
+        margin: 0;
+    }
+`
+
+export const Finalizar = styled.div`
+    width: 90%;
+    padding: 15px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    right: 2px;
+`
+
+export const CartItem = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color: black;
+    font-size: 12px;
+
+    img {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
+    div {
+            flex-grow: 1;
+    }
+       
+    p {
+            font-weight: bold;
+    }
+`
+
+export const Grid = styled.div`
+    width: 98%;
+    height: 65%;
+    padding: 10px;
+    overflow-y: scroll;
+    margin-top: 30px;
 `
