@@ -181,6 +181,9 @@ export const CartItem = styled.div`
     p {
             font-weight: bold;
     }
+    button {
+        color: red;
+    }
 `
 
 export const Grid = styled.div`
@@ -189,4 +192,12 @@ export const Grid = styled.div`
     padding: 10px;
     overflow-y: scroll;
     margin-top: 30px;
+`
+export const Qtd = styled.div`
+    background-color: darkgreen;
+    border-radius: 10px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    cursor: pointer;
 `
