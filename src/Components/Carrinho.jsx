@@ -10,10 +10,34 @@ function Carrinho({ handleClick }) {
         const storage = JSON.parse(localStorage.getItem('cart')) || [];
         setCart(storage);
     },[]);
-    
+
     const totalSum = cart.reduce((accumulator, product) => {
         return accumulator + parseFloat(product.price);
     }, 0); 
+
+    const adicionar = (item) => {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const ProductIndex = cart.findIndex(prod => prod.id === item.id);
+        if (cart[ProductIndex].qtd < 1 ) {
+            cart[ProductIndex].qtd += 2;
+        } else {
+            cart[ProductIndex].qtd += 1;
+        }
+        
+        localStorage.setItem('cart', JSON.stringify([...cart]));
+    }
+
+    const remover = (item) => {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const ProductIndex = cart.findIndex(prod => prod.id === item.id);
+        if (cart[ProductIndex].qtd === 1 ) {
+            const newCart = cart.filter(({ id }) => id !== item.id);
+            localStorage.setItem('cart', JSON.stringify([...newCart]));
+        } else {
+            cart[ProductIndex].qtd -= 1;
+            localStorage.setItem('cart', JSON.stringify([...cart]));
+        }
+    }
     
     
     return(
@@ -24,7 +48,12 @@ function Carrinho({ handleClick }) {
 
             <Grid>
                 {
-                    cart.map((item) => <ProdutosCar item={item} />)
+                    cart.map((item) => (
+                        <ProdutosCar item={item} key={item.id}
+                            adicionar={() => adicionar(item)}
+                            remover={() => remover(item)}
+                        />
+                    ))
                 }
             </Grid>
 
