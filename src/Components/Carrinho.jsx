@@ -12,7 +12,7 @@ function Carrinho({ handleClick }) {
     },[]);
 
     const totalSum = cart.reduce((accumulator, product) => {
-        return accumulator + parseFloat(product.price);
+        return accumulator + parseFloat(product.price * product.qtd);
     }, 0); 
 
     const adicionar = (item) => {
